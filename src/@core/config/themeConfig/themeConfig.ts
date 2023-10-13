@@ -1,4 +1,4 @@
-import { ThemeConfig } from "./themeType";
+import { ThemeConfig } from "../themeType";
 
 const themeConfig: ThemeConfig = {
   // ** Layout Configs
