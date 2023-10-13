@@ -1,20 +1,20 @@
 import React from "react";
 import { ChildrenProps } from "./type";
-import themeConfig from "@/config/themeConfig";
 import Image from "next/image";
+import themeConfig from "../config/themeConfig/themeConfig";
 
-const CircleLayout = ({ children }: ChildrenProps) => {
+const LayoutPage = ({ children }: ChildrenProps) => {
   return (
     <div className="p-2">
-      <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[100vh] w-full">
+      <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[100vh] w-full ">
         <div className="h-[32px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -left-[17px] top-[72px] rounded-l-lg"></div>
         <div className="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
         <div className="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
         <div className="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
-        <div className="rounded-[2rem] overflow-hidden w-full h-full bg-gray-800">
+        <div className="rounded-[2rem] overflow-auto w-full h-full bg-gray-800 scrollbar-hide">
           <div className="hidden dark:block w-full h-full">
-            <div className="bg-gradient-to-br from-white from-10% via-white via-30% to-green-100 to-90%  h-full">
-              <div className=" h-2/6 w-full relative rounded-b-[50%] shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]">
+            <div className="bg-gradient-to-br from-green-100 from-10% via-white via-30% to-green-100 to-90%  h-auto min-h-full rounded-[2rem]">
+              <div className=" h-[235px] w-full relative rounded-b-[50%] shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]">
                 <div
                   style={{ backgroundImage: `url(${themeConfig.background})` }}
                   className="w-full h-full bg-cover rounded-b-[50%]  rounded-t-[2rem]"
@@ -39,4 +39,4 @@ const CircleLayout = ({ children }: ChildrenProps) => {
   );
 };
 
-export default CircleLayout;
+export default LayoutPage;

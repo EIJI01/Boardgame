@@ -1,11 +1,6 @@
 import React from "react";
-type ButtonProps = {
-  actionLabel: string;
-  onclick: () => void;
-  disabled?: boolean;
-  outline?: boolean;
-  customStyle?: string;
-};
+import { ButtonProps } from "../type";
+
 const Button = ({
   actionLabel,
   onclick,

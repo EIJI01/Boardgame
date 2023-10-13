@@ -1,14 +1,14 @@
-import { UserProvider } from "@/context/userContext";
-import CircleLayout from "@/components/layouts/CircleLayout";
+import { UserProvider } from "@/@core/context/userContext";
+import LayoutPage from "@/@core/components/LayoutPage";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <UserProvider>
-      <CircleLayout>
+      <LayoutPage>
         <Component {...pageProps} />
-      </CircleLayout>
+      </LayoutPage>
     </UserProvider>
   );
 }
